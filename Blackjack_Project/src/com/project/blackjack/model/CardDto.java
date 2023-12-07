@@ -1,10 +1,13 @@
 package com.project.blackjack.model;
 
-public class BlackjackDto {
+	
+	
+public class CardDto {
+	
 	private String cardDeck;		// 52장의 숫자카드 + 패턴카드
-	private String denomination;		// 2 ~ 10 4쌍
+	private String denomination;	// 2 ~ 10 4쌍
 	private String cardSuit;		// ♥ ◆ ♣ ♠ 4쌍 
-	private int value;
+	private int value;				// 카드 2장의 합
 	
 	public int getValue() {
 		return value;
