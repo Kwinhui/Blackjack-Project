@@ -3,6 +3,7 @@ package com.project.blackjack.game;
 import java.util.List;
 
 import com.project.blackjack.Service.CardService;
+import com.project.blackjack.Service.GameService;
 import com.project.blackjack.model.CardDto;
 
 public class Game {
@@ -19,7 +20,23 @@ public class Game {
 //			System.out.println(dto);
 //		}
 		
-		System.out.println(card.getRadnomCard());
+//		System.out.println(card.getRadnomCard());
+		GameService game = new GameService();
+		System.out.println(game.DealerReceive());
+		System.out.println(game.PlayerReceive());
+		System.out.println(deckList.size());
+		
+		for(int i = 0; i < 4; i++) {
+			if(game.DealerReceive().equals(deckList.get(i))) {
+				deckList.remove(i);
+				
+			}
+		}
+		for(CardDto dto : deckList) {
+			System.out.println(dto);
+			
+		}
+		
 		
 		
 		

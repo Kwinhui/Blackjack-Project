@@ -56,6 +56,8 @@ public class CardService {
 	public CardDto getRadnomCard() {
 		int size = deckList.size();
 		int select = (int) (Math.random() * size);
+		
+		
 		return deckList.get(select);
 
 	}
